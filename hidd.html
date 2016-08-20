@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.0.0.min.js" type="text/javascript"></script>
+        <style>
+            .a{
+                position:absolute;
+                z-index: 1px;
+            }
+            .a2{
+                
+                width:150px;
+                
+            }
+            div{
+                height:200px;
+                width:500px;
+                background:#fff;
+                position: absolute;
+                display: none;
+                top:50px;
+                left:50px;
+            }
+        </style>
+    </head>
+    <body>        
+        <img src="./img/7.jpg" alt="" name="a1" class="a">
+        <div>
+        <img src="./img/8.jpg" alt="" name="a2" class="a2">
+        <img src="./img/9.jpg" alt="" name="a2" class="a2">
+        <img src="./img/10.jpg" alt="" name="a2" class="a2">
+        </div>
+        <script>
+            $(function(){
+                $('[name=a1]').hover(
+                function(){
+                    $(this).animate({
+                        'opacity':'.5',                        
+                   
+                    },function(){
+                        $('div').fadeToggle();
+                    });
+                },function(){
+                   $(this).animate({
+                        'opacity':'1',                        
+                   
+                    },function(){
+                        $('div').fadeToggle();
+                    }); 
+                });
+                });
+        </script>
+    </body>
+</html>
